@@ -1,0 +1,178 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot, % set margins without considering header and footer
+    top=0.2cm, % separation between body and page edge from the top
+    bottom=1cm, % separation between body and page edge from the bottom
+    left=1cm, % separation between body and page edge from the left
+    right=1cm, % separation between body and page edge from the right
+    footskip=1.0cm, % separation between body and footer
+]{geometry} % for adjusting page geometry
+\usepackage{titlesec} % for customizing section titles
+\usepackage{tabularx} % for making tables with fixed width columns
+\usepackage{array} % tabularx requires this
+\usepackage[dvipsnames]{xcolor} % for coloring text
+\definecolor{primaryColor}{RGB}{0, 0, 0} % define primary color
+\usepackage{enumitem} % for customizing lists
+\usepackage{fontawesome5} % for using icons
+\usepackage{amsmath} % for math
+\usepackage{enumitem}
+\usepackage[
+    pdftitle={Moussa Kalla's CV},
+    pdfauthor={Moussa Kalla},
+    pdfcreator={LaTeX with RenderCV},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref} % for links, metadata and bookmarks
+\usepackage{charter} % for main font
+
+% Ensure that generated pdf is machine readable/ATS parsable:
+\input{glyphtounicode}
+\pdfgentounicode=1
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+
+% Some settings:
+\raggedright
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt} % remove space before adjustwidth environment
+\pagestyle{empty} % no header or footer
+\setcounter{secnumdepth}{0} % no section numbering
+\setlength{\parindent}{0pt} % no indentation
+\setlength{\topskip}{0pt} % no top skip
+\setlength{\columnsep}{0.15cm} % set column separation
+\pagenumbering{gobble} % no page numbering
+
+\titleformat{\section}{\needspace{\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{-1pt}\titlerule]
+
+\titlespacing{\section}{
+    -1pt
+}{
+    0.3cm
+}{
+    0.2cm
+} % section title spacing
+
+\renewcommand{${{}}$} % custom bullet points
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10cm,
+        parsep=0.10cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0.4cm
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights
+
+\newenvironment{header}{
+    \setlength{\topsep}{-10pt}\par\kern\topsep\centering\linespread{1.5}
+}{
+    \par\kern\topsep
+} % new environment for the header
+
+\begin{document}
+
+\begin{header}
+    \fontsize{25pt}{25pt}\selectfont Moussa Kalla
+
+    \vspace{1pt}
+
+    \normalsize
+    \mbox{Avignon, France}%
+    \kern 5.0pt%
+    \faPhone\kern 3pt +33 744885914%
+    \kern 5.0pt%
+    \faEnvelope\kern 3pt \href{mailto:moussa.kalla.am@gmail.com}{moussa.kalla.am@gmail.com}%
+    \kern 5.0pt%
+    \faLinkedin\kern 3pt \href{https://www.linkedin.com/in/moussa-kalla/}{linkedin.com/in/moussa-kalla}%
+\end{header}
+    
+\vspace{1pt}
+
+\section{PROFIL}
+\begin{highlights}
+    \item \textbf{À la recherche d’un stage alterné de 6 mois à partir de fevrier 2025.}\\
+        Toujours avide d'apprendre, je suis prêt à relever de nouveaux défis et à m'investir activement dans des projets concrets. \\Grâce à ma créativité et à ma productivité, je suis convaincu que ma contribution sera un atout précieux pour votre équipe.
+    \end{itemize}
+\end{highlights}
+
+\section{EXPÉRIENCES PROFESSIONNELLES}
+\begin{highlights}
+    \item \textbf{Alternance - Data Science | Amelioration continue | Digitalisation\;\;\;}
+    \textit{McCormick France} \hfill 6 mois · Sept 2024 - Févr 2025
+    \begin{itemize}[label=$\bullet$]
+        \item  Analyse de Données : Collecte, traitement et analyse de données des processus industriels et commerciaux afin d'identifier des axes d'amélioration.
+        \item  Développement et mise en place de Proofs of Concept (POC) pour des tableaux de bord et outils prédictifs basés sur la Big Data, facilitant la prise de décision informée.
+        \item Contribution à la stratégie Data Analytics pour la direction "Distribution France" de McCormick, en lien avec les objectifs de digitalisation et d'efficacité.
+    \end{itemize}
+    \item \textbf{Stage Ingénieur - Data Science \& Modélisation\;\;\;}
+    \textit{ArcelorMittal - Dunkerque, France} \hfill 6 mois · Mars 2024 - Août 2024
+    \begin{itemize}[label=$\bullet$]
+        \item  Conception d'un modèle de prédiction basé sur le Deep Learning pour l'optimisation de la détection des incidents en analysant et en modélisant des séries temporelles en temps réel. \textbf{Réduction de 60\% du nombre d'incidents.}
+        \item  Développement d'outils automatisés pour la visualisation des données, facilitant ainsi l'analyse des incidents.
+    \end{itemize}
+
+    \item \textbf{Stage - Modélisation Stochastique \;\;\;} 
+    \textit{Université Sultan Moulay Slimane, Maroc} \hfill 4 mois · Mars 2022 - Juin 2022
+    \begin{itemize}[label=$\bullet$]
+        \item Développement de modèles prédictifs pour l'analyse des risques de marché, incluant la conception et l'implémentation d'algorithmes pour la prévision des prix des actifs financiers.
+        \item Application du modèle de Black-Scholes pour l’évaluation d’une option et de quelques autres produits dérivés.
+    \end{itemize}
+\end{highlights}
+
+\section{FORMATION}
+\begin{highlights}
+    \item \textbf{Mastère 2 - Data Science \& Intelligence Artificielle\;\;\;} 
+    \textit{IA School, France} \hfill 2024-2025
+    \begin{itemize}[label=$\bullet$]
+        \item Big Data, Data Management, Distributed Machine Learning, DevOps-MLOps, Cloud Computing.
+        \item Business Intelligence, Analyse des besoins \& Stratégie Big Data, Management de projet et agile.
+
+    \end{itemize}
+
+    \item \textbf{Master 2 - Informatique \;\;\;}
+    \textit{École d'Ingénieurs du Littoral-Côte-d'Opale - Calais, France} \hfill 2023-2024
+    \begin{itemize}[label=$\bullet$]
+        \item Simulation et Modélisation, Big data, Analyse des données, Machine Learning, Deep Learning.
+    \end{itemize}
+    \item \textbf{Master 1 - Ingénierie Mathématiques et Statistiques\;\;\;}
+    \textit{Université Mohammed V de Rabat, Maroc} \hfill 2022-2023
+    \begin{itemize}[label=$\bullet$]
+        \item Modélisation Statistique et Stochastique, Optimisation avancée, Programmation mathématique.
+    \end{itemize}
+
+    \item \textbf{Licence - Mathématiques Appliquées\;\;\;}
+    \textit{Université Sultan Moulay Slimane, Maroc} \hfill 2018-2022
+    \begin{itemize}[label=$\bullet$]
+        \item Statistique inférentielle et multivariée, Probabilités avancées, Théorie de la mesure.
+    \end{itemize}
+\end{highlights}
+
+\section{COMPÉTENCES}
+\begin{highlights}
+    \item \textbf{Langages de programmation} : Python, SQL, R, Matlab, C++.
+    \item \textbf{Outils de data engineering} : ETL, Hadoop, Apache Kafka, Spark, PySpark.
+    \item \textbf{Outils de NLP} : NLTK, SpaCy, Transformers (Hugging Face)
+    \item \textbf{Outils de visualisation} : Excel, Power BI, Tableau, QlikView, IBAanalyzer, Matplotlib, Plotly, Bokeh.
+    \item \textbf{Frameworks et bibliothèques} : Scikit-learn, TensorFlow, PyTorch.
+    \item \textbf{Gestion de version} : Git, GitHub.
+     \item \textbf{Gestion de Projets} : Méthodes Agile, gestion de feuilles de route, planification de projets
+    \item \textbf{Soft Skills} : Capacité d’adaptation, Esprit d’équipe, Dynamisme, Autonomie.
+\end{highlights}
+\section{CERTIFICATIONS}
+\begin{highlights}
+    \item \textbf{Certification en Science des données} - IBM (Coursera)
+    \item \textbf{Certification en Machine Learning} - Stanford University (Coursera)
+\end{highlights}
+
+\section{INTÉRÊTS}
+\begin{highlights}
+ \textbf{Analyse de données} : Passionné par la transformation des données brutes en insights exploitables.
+    \item \textbf{Modélisation mathématique} : Passionné par l'utilisation des mathématiques pour résoudre des problématiques complexes.
+    \item \textbf{Transformation Digitale} : Passion pour l'innovation numérique et les nouvelles technologies.
+\end{highlights}
+
+\end{document}
