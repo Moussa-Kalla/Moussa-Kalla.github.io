@@ -20,7 +20,7 @@ const eng = {
       period: "2022-2024",
       city: "Mohammedia, Morocco",
     },
-    bachelor: {+33 6 87 16 49 93
+    bachelor: {+33 7 44 88 59 14
       title: "Bachelor’s degree in Software Engineering",
       institute: "My Ismail university, Faculty of Science and Technologies",
       period: "2018-2022",
